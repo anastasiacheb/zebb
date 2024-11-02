@@ -1,5 +1,7 @@
-@use "normalize.scss";
+
 @use 'abstracts';
 @use 'base';
 @use 'components';
 @use 'layout';
+
+@import "normalize.scss";
