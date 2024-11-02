@@ -1,0 +1,54 @@
+@use "../abstracts" as *;
+
+.image {
+
+    &_size-m {
+        width: 100%;
+        /*width: 24rem;
+        height: auto;
+
+        @include tablet {
+            width: 42rem;
+        }
+
+        @include desktop_m {
+            width: 60rem;
+        }*/
+    }
+
+    &_size-l {
+        width: 100%;
+        /*width: 29.4rem;
+        height: auto;
+
+        @include tablet {
+            width: 44.4rem;
+        }
+
+        @include desktop_m {
+            width: 62rem;
+        }
+
+        @include desktop_l {
+            width: 78rem;
+        }*/
+        
+    }
+
+    &_size-xl {
+        width: 54rem;
+        height: auto;
+
+        @include desktop_m {
+            width: 65rem;
+        }
+
+        @include desktop_l {
+            width: 78rem;
+        }
+    }
+
+    &_transparent {
+        opacity: 0.2;
+    }
+}

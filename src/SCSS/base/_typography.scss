@@ -1,0 +1,145 @@
+@use "../abstracts" as *;
+
+p {
+    @include regular;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+}
+
+.text {
+    @include regular;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+}
+
+.text_small {
+    @include regular;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    @include tablet {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+}
+
+.text-h1 {
+    @include black;
+    font-size: 4rem;
+    line-height: 5.2rem;
+
+    @include tablet {
+        font-size: 6.4rem;
+        line-height: 8.2rem;
+    }
+
+    @include desktop_m {
+        font-size: 7.6rem;
+        line-height: 10.1rem;
+    }
+}
+
+.text-h2 {
+    @include bold;
+    font-size: 4rem;
+    line-height: 5.2rem;
+
+    @include tablet {
+        font-size: 5.4rem;
+        line-height: 7.2rem;
+    }
+}
+
+.text-h3 {
+    @include bold;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
+}
+
+.text-h4 {
+    @include bold;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+
+    @include tablet {
+        font-size: 2.4rem;
+        line-height: 3.6rem;
+    }
+}
+
+
+.text_logo {
+    color: $pink;
+    @include bold;
+    font-size: 1.8rem;
+
+    @include tablet {
+        font-size: 2.8rem;
+    }
+}
+
+.text_pink {
+    color: $white;
+    background-color: $pink;
+    display: inline-block;
+}
+
+.text_outline {
+    display: inline-block;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-color: $pink;
+        z-index: -1;
+    }
+}
+
+.text_transparent {
+    @include regular;
+    font-size: 6.4rem;
+    line-height: 7.2rem;
+    color: $white;
+    text-shadow: -1px -1px 0 $blue, 1px -1px 0 $blue, -1px 1px 0 $blue, 1px 1px 0 $blue;
+}
+
+.text_size-s {
+    @include regular;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.text_size-xs {
+    @include regular;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    min-width: max-content;
+}
+
+.text_bold {
+    @include bold;
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+.text_white {
+    color: $white;
+}
+
+.text_desk {
+    display: none;
+    @include tablet {
+        display: block;
+    }
+}
+
+.text_mob {
+    @include tablet {
+        display: none;
+    }
+}

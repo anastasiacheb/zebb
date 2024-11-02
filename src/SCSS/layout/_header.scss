@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+.header {
+    margin-top: 7.4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+
+    & div {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    
+    @include space-sides;
+
+    @include tablet {
+        margin-top: 8.9rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+
+    @include desktop_s {
+        margin-top: 9.2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop_m {
+        padding-top: 20rem;
+        padding-bottom: 20rem;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+        //flex-grow: 1;
+        //flex-basis: 0;
+
+        @include desktop_s {
+            align-items: start;
+        }
+    }
+
+    &__text {
+        text-align: center;
+
+        @include desktop_s {
+            text-align: left;
+        }
+    }
+}

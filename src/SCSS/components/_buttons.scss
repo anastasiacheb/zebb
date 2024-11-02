@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+.button {
+    color: $white;
+    background-color: $blue;
+    @include bold;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding: 1.6rem 2rem;
+    box-shadow: 0 2rem 4rem  rgba(0, 0, 0, .25);
+
+    @include tablet {
+        padding: 2.4rem 4rem;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+
+    &_wide {
+        padding: 1.6rem 6rem;
+        
+        @include tablet {
+            padding: 2.4rem 8rem;
+        }
+    }
+
+    &-play {
+        display: flex;
+        gap: 2.4rem;
+    }
+}

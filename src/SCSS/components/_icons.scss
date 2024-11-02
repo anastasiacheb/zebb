@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.logo {
+    width: 2.6rem;
+    height: auto;
+
+    @include tablet {
+        width: 4.1rem;
+    }
+}
+
+.icon {
+
+    &-play {
+        width: 6.8rem;
+        height: auto;
+    }
+
+    &_star {
+        width: 2.9rem;
+        height: auto;
+    }
+
+    &_move {
+        width: 8rem;
+        height: auto;
+    }
+
+    &-social {
+        width: 3.4rem;
+        height: auto;
+    }
+}

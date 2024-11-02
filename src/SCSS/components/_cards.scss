@@ -1,0 +1,101 @@
+@use "../abstracts" as *;
+
+.card-one {
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include tablet {
+        flex-direction: row;
+        align-items: start;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-top: 0.8rem;
+    }
+}
+
+.card {
+    border: 1px solid #B8B8B8;
+    border-radius: 5rem;
+    padding: 7rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+    text-align: center;
+    transition: $transition;
+
+    &__image img{
+        width: 20rem;
+        height: 20rem;
+        border: 2px solid $black;
+        border-radius: 50%;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    @include desktop_s {
+        &:hover {
+            box-shadow: 0 2rem 4rem rgba(0, 0, 0, .15);
+            padding: 9rem 0;
+            margin: -2rem 0;
+        }
+
+    }
+}
+
+.card-testi {
+    border: 1px solid #949494;
+    border-radius: 5rem;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.6rem;
+    align-items: center;
+    text-align: center;
+    transition: $transition;
+    width: calc(100vw - 3.6rem);
+
+    @include tablet {
+        border-radius: 15rem;
+        padding: 6rem 4rem;
+        width: 35rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__rate {
+        display: flex;
+        gap: 1.6rem;
+    }
+
+    &__image {
+        width: 15rem;
+        height: 15rem;
+        border-radius: 100%;
+    }
+
+    &_centered {
+
+        @include tablet {
+            padding: 10rem 2rem;
+            margin: -6rem 0;
+            width: 46rem;
+        }
+    }
+}

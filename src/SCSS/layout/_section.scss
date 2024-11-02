@@ -1,0 +1,398 @@
+@use "../abstracts" as *;
+
+.section {
+    padding: 8rem 1.6rem;
+
+    & div {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
+    
+        @include tablet {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include desktop_s {
+            padding: 10rem 3.2rem;
+        }
+
+        @include desktop_l {
+            max-width: 162rem;
+            margin: auto;
+        }
+}
+
+.sec-one {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+
+    @include tablet {
+        gap: 10rem;
+    }
+
+    @include desktop_s {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        align-items: center;
+        max-width: 52rem;
+
+        @include desktop_s {
+            align-items: start;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 4.2rem;
+        align-items: center;
+        text-align: center;
+
+        @include desktop_s {
+            align-items: start;
+            text-align: left;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: row;
+            gap: 6rem;
+        }
+    }
+}
+
+.sec-two {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: relative;
+
+    & h2 {
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+        }
+    }
+
+    @include tablet {
+        gap: 18.8rem;
+    }
+
+    @include desktop_s {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 12rem;
+
+        @include tablet {
+            gap: 12rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    &__image {
+        display: none;
+        
+
+        @include tablet {
+            display: block;
+            position: absolute;
+            top: 57rem;
+            right: 0rem;
+        }
+
+        @include desktop_s {
+            top: 40rem;
+            left: -13rem;
+            right: none;
+            width: 100%;
+        }
+
+        @include desktop_m {
+            top: 19rem;
+            left: -19rem;
+        }
+    }
+}
+
+.sec-three {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    align-items: start;
+
+    @include tablet {
+        align-items: center;
+    }
+
+    @include desktop_s {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+        align-items: start;
+        
+        @include tablet {
+            align-items: center;
+            text-align: center;
+
+            & h2 {
+                max-width: 66rem;
+            }
+
+            & p {
+                max-width: 48rem;
+            }
+        }
+
+        @include desktop_s {
+            align-items: start;
+            text-align: left;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        @include desktop_s {
+            justify-content: end;
+            width: auto;
+        }
+    }
+}
+
+.sec-team {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem; 
+    align-items: center;
+    text-align: center; 
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
+
+        @include desktop_s {
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 7.4rem;
+            column-gap: 3.2rem;
+        }
+    }
+}
+
+.sec-work {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+    text-align: center;
+
+    &__cat {
+        display: flex;
+        gap: 2.4rem;
+        flex-wrap: wrap;
+
+        @include tablet {
+            gap: 6rem;
+        }
+    }
+
+    &__content {
+        display: grid;
+        gap: 3.2rem;
+        grid-template-rows: repeat(6, 33rem);
+
+        @include desktop_s {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 30rem 22rem 12rem 39rem;
+        }
+    }
+
+    @include desktop_s {
+        &__image {
+            &:nth-child(1) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+    
+            &:nth-child(2) {
+                grid-column-start: 2;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 4;
+            }
+    
+            &:nth-child(3) {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+    
+            &:nth-child(4) {
+                grid-column-start: 3;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 4;
+            }
+    
+            &:nth-child(5) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 3;
+                grid-row-end: 5;
+            }
+    
+            &:nth-child(6) {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 4;
+                grid-row-end: 5;
+            }
+        }
+    }
+    
+    
+}
+
+.sec-testi {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 0;
+
+    @include tablet {
+        gap: 10rem;
+        //padding-left: 2rem;
+        //padding-right: 2rem;
+    }
+
+    @include desktop_s {
+        padding: 10rem 0;
+    }
+
+    @include desktop_l {
+        //padding-left: 0;
+        //padding-right: 0;
+    }
+
+    &__content {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__slider {
+        display: flex;
+        gap: 3.2rem;
+        width: 3000px;
+        //transition: $transition;
+
+        @include tablet {
+            margin: 6rem 0;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+
+        @include tablet {
+            justify-content: space-between;
+            width: 100%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include desktop_s {
+            padding: 0 3.2rem;
+        }
+
+        @include desktop_l {
+            max-width: 162rem;
+            margin: auto;
+        }
+    }
+}
+
+.sec-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    align-items: center;
+
+    @include desktop_s {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__content {
+        display: flex; 
+        flex-direction: column;
+        gap: 8rem;
+
+        @include tablet {
+            max-width: 53rem;
+        }
+
+        @include desktop_m {
+            max-width: 65rem;
+        }
+
+        & h2 {
+            text-align: center;
+
+            @include desktop_s {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.sec-form_two {
+    @include desktop_s {
+        flex-direction: row-reverse;
+    }
+}

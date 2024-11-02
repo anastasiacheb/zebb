@@ -1,0 +1,32 @@
+@use 'colors' as *;
+@use 'breakpoints' as *;
+
+@mixin space-sides {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    
+        @include tablet {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @include desktop_s {
+            padding-left: 3.2rem;
+            padding-right: 3.2rem;
+        }
+
+        @include desktop_l {
+            max-width: 162rem;
+            margin: auto;
+        }
+}
+
+@mixin space {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    @include desktop_s {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+}
