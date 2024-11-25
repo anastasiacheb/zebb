@@ -103,6 +103,8 @@
 
     &__image {
         position: absolute;
+        max-height: 51rem;
+        width: auto;
 
         &_left {
             top: 0;

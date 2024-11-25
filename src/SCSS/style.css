@@ -1180,6 +1180,8 @@ p {
 }
 .footer__image {
   position: absolute;
+  max-height: 51rem;
+  width: auto;
 }
 .footer__image_left {
   top: 0;
